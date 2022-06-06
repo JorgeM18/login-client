@@ -6,7 +6,7 @@ const { AUTH_BASE_URL, AUTH_CLIENT_ID } = config;
 const loginId = new WebSDK(AUTH_BASE_URL, AUTH_CLIENT_ID);
 
 export default class AuthAPI extends BaseAPI {
-  static baseEndpoint = '/api/auth';
+  static baseEndpoint = '';
 
   static async genAuthToken(username, action) {
     const response = await this.post(`${this.baseEndpoint}/token`, { username, action });
